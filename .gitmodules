@@ -1,0 +1,8 @@
+[submodule "src/ldlidar"]
+	path = src/ldlidar
+	url = https://github.com/linorobot/ldlidar.git
+	branch = ros2
+[submodule "src/slam_toolbox"]
+	path = src/slam_toolbox
+	url = https://github.com/SteveMacenski/slam_toolbox.git
+	branch = ros2
