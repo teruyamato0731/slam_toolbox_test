@@ -11,6 +11,9 @@ services:
       - ../:/workspaces/slam_toolbox_test:cached
       # GUI
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - /dev:/dev:rw
     tty: true
     command: sleep infinity
     working_dir: /workspaces/slam_toolbox_test
+    privileged: true
+    ipc: host
