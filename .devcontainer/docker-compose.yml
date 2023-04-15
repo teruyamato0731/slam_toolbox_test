@@ -8,9 +8,9 @@ services:
       - QT_X11_NO_MITSHM=1
     volumes:
       # Working
-      - ../:/workspaces/dev_humble:cached
+      - ../:/workspaces/slam_toolbox_test:cached
       # GUI
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
     tty: true
     command: sleep infinity
-    working_dir: /workspaces/dev_humble
+    working_dir: /workspaces/slam_toolbox_test
