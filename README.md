@@ -26,6 +26,15 @@ Ubuntu 22.04で動作確認済み。
 1. 「Reopen in Container」でdevcontainerを開く
 1. `ls /dev/ | grep ttyUSB` を実行し、シリアル変換機のポートを確認しておく。
     ([見つからない場合、こちらを参照](https://github.com/teruyamato0731/ld06_test#trouble-shooting))
+1. [src/slam_toolbox/config/mapper_params_online_async.yaml](src/slam_toolbox/config/mapper_params_online_async.yaml) を下記のように編集
+    ```yaml
+        # ROS Parameters
+        odom_frame: odom
+        map_frame: map
+        base_frame: laser
+        scan_topic: /scan
+        mode: mapping #localization
+    ```
 1. それぞれ別のターミナルで下記コマンドを実行。
     ```bash
     sudo apt update && rosdep update && rosdep install --from-path src --ignore-src -y
